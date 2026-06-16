@@ -10,18 +10,20 @@ st.title("🏎️ All-Time Formula 1 Analytics Hub")
 # 1. Optimized Data Loading Block
 @st.cache_data
 def load_data():
-    import os
-    if os.path.exists('results.csv'):
-        base = ''
-    elif os.path.exists('Data/results.csv'):
-        base = 'Data/'
-    else:
-        base = './Data/'
+    # # 1. Optimized Data Loading Block
+import os
 
-    results = pd.read_csv(f'{base}results.csv')
-    drivers = pd.read_csv(f'{base}drivers.csv')
-    constructors = pd.read_csv(f'{base}constructors.csv')
-    races = pd.read_csv(f'{base}races.csv')
+if os.path.exists('results.csv'):
+    base = ''
+elif os.path.exists('Data/results.csv'):
+    base = 'Data/'
+else:
+    base = './Data/'
+
+results = pd.read_csv(f'{base}results.csv')
+drivers = pd.read_csv(f'{base}drivers.csv')
+constructors = pd.read_csv(f'{base}constructors.csv')
+races = pd.read_csv(f'{base}races.csv')
     return results, drivers, constructors, races
     results, drivers, constructors, races = load_data()
 
