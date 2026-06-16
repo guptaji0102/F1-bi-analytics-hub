@@ -7,10 +7,6 @@ import plotly.graph_objects as go
 st.set_page_config(page_title="Ultimate F1 Historical Hub", layout="wide")
 st.title("🏎️ All-Time Formula 1 Analytics Hub")
 
-# 1. Optimized Data Loading Block
-@st.cache_data
-def load_data():
-# # 1. Data Loading Block
 import os
 
 if os.path.exists('results.csv'):
