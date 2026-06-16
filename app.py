@@ -9,7 +9,7 @@ st.title("🏎️ All-Time Formula 1 Analytics Hub")
 # 1. Optimized Data Loading Block
 @st.cache_data
 def load_data():
-    results = pd.read_csv('./Data/results.csv')
+    results = pd.read_csv('results.csv')
     drivers = pd.read_csv('./Data/drivers.csv')
     constructors = pd.read_csv('./Data/constructors.csv')
     races = pd.read_csv('./Data/races.csv')
